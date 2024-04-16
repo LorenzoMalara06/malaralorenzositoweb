@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="anagraficaCSS.css">
+    <title>Anagrafica</title>
+
+    <script>
+    function stampa (){
+        var nome = document.getElementById('nome').value;
+        var cognome = document.getElementById('cognome').value;
+        var eta = document.getElementById('eta').value;
+        var x = document.getElementsByName('sesso');
+        for(var i=0; i<x.length; i++){
+            if(x[i]?.checked){
+                var Sesso = document.getElementsByName('sesso')[i].value;
+                break;
+        }
+    }
+    
+  
+    var citta = document.getElementById('città').value;
+
+
+
+    var provincia = document.getElementById('provincia');
+    for(var i=0; i<provincia.length; i++){
+        if(provincia[i].selected){
+            var Provincia = provincia[i].value;
+            break;
+        }
+    }
+
+    var spo = document.getElementById('Sport');
+    var v= [];
+    for(var i=0; i<spo.length; i++){
+        if(spo[i].selected){
+            var n1= spo[i].value;
+            v.push(n1);
+        }
+    }
+
+    var ma= document.getElementsByName('materie');
+    var v2 = [];
+    for(var i=0; i<ma.length; i++){
+        if(ma[i]?.checked){
+            var n2=ma[i].value;
+            v2.push(n2);
+            
+        }
+    }
+
+
+    document.getElementById('ris').innerHTML =
+        "Nome: " + nome + "<br> Cognome: " + cognome+ "<br> Età : " + eta + "<br> Sesso: " + 
+        Sesso+ "<br> Nato a: " + citta + "<br> Provincia di: " + Provincia + "<br> Sport preferiti: " +v.join("; ")+
+         "<br> Materie insufficienti: " + v2.join("; ");
+
+}
+    </script>
+
+</head>
+<body>
+    <div class="box">
+        <input class="p1" style="margin: 10px;" type="text" placeholder="nome" id="nome">
+        <input class="p1" style="margin: 10px;"type="text" placeholder="cognome" id="cognome">
+        <input class="p1" style="margin: 10px;"type="number" placeholder="età" id="eta"><br><br>
+        <input class="p1"style="margin: 20px 11%"  type="radio" value="Maschio" name="sesso">M
+        <input class="p1"style="margin: 20px 11%"  type="radio" value="Femmina" name="sesso">F
+        <input class="p1"style="margin: 20px 11%"  type="radio" value="Altro" name="sesso">A
+        <input class="p1"style="margin: 0 35%;" type="text" placeholder="nato a..." id="città">
+    </div>
+
+    <div class="box2">
+        <center>
+        <h2>Provincia di:</h2>
+            <select style="width: 20%;padding: 20px;border: 1px solid ;border-radius: 5px;margin: 20px;" id="provincia">
+                <option value="Mi" name="città">Milano</option>
+                <option value="Mn" name="città">Mantova</option>
+                <option value="Bg" name="città">Bergamo</option>
+                <option value="Pv" name="città">Pavia</option>
+                <option value="Bs" name="città">Brescia</option>
+                <option value="Va" name="città">Varese</option>
+                <option value="So" name="città">Sondrio</option>
+            </select>
+
+        <h2>Sport preferiti:</h2>
+            <select id="Sport" multiple="multiple" style=" width: 20%;padding: 10px;border: 1px solid ;border-radius: 5px; margin: 20px">
+                <option>calcio</option>
+                <option>pallavolo</option>
+                <option>tennis</option>
+                <option>danza</option>
+                <option>basket</option>
+                <option>palestra</option>
+                <option>non pratico</option>
+            </select>
+        </center>
+
+    </div>
+       
+
+    <div class="box3"><center>
+        <h2>Materie insufficienti: </h2>
+            <label id="label">
+                <input type="checkbox" value="matematica" name="materie">matematica
+                <input type="checkbox" value="informatica" name="materie">informatica
+                <input type="checkbox" value="tps" name="materie">tps
+                <input type="checkbox" value="italiano" name="materie">italiano
+                <input type="checkbox" value="sistemi" name="materie">sistemi<br>
+                <input type="checkbox" value="inglese" name="materie">inglese
+                <input type="checkbox" value="storia" name="materie">storia
+            </label></center>
+    </div>   
+
+
+
+        <div class="invia">
+            <button type="button" class="bottone" onclick="stampa()">INVIA</button>
+            <p id="ris"></p>
+        </div>
+
+
+ </body>
+</html>

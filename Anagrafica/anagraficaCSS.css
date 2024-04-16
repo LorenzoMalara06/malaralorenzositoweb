@@ -1,0 +1,51 @@
+body {
+    background-color:whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+  
+.box{
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(179, 179, 179);
+    border-radius: 10px;
+}
+.box2{
+    width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgb(179, 179, 179);
+    border-radius: 10px;
+}
+.box3{
+    width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgb(179, 179, 179);
+    border-radius: 10px;
+}
+    
+
+
+  
+.invia {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:  rgb(179, 179, 179);;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.bottone{
+    margin: 0 43%;
+    height: 40px;
+    background-color: white;
+    font-size: 25px;
+    border-radius: 10px;
+}
