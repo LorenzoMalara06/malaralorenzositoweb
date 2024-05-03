@@ -1,0 +1,25 @@
+#pagina{
+    width: 650px;
+    margin: 0 auto;
+}
+#c1{
+    background: blue;
+    float: left;
+    width: 200px;
+    height: 212px;
+}
+#c2{
+    background: rgb(0, 255, 247);
+    float: left;
+    width: 250px;
+}
+#c3{
+    background: rgb(119, 0, 255);
+    float: left;
+    width: 200px;
+}
+#piede{
+    background: rgb(247, 0, 255);
+    float: left;
+    width: 650;
+}
