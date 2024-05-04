@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahoot risposte</title>
+</head>
+<body style=" background-image: url(campo2.jpeg);background-repeat:no-repeat ;background-size: 50%; background-position: 50% -15%; background-color:  rgb(102, 203, 71);;">
+    
+    <button type="button" style="width: 300px; padding: 30px;border-radius: 100px; background-color:rgb(7, 182, 7); font-size: 30px; margin: 0 40%;" onclick="VediRisultati()">Mostra i risultati</button>
+    <p id="ris" style="font-size: 25px;color:  black;margin: 50px 43%;"></p>
+    <script>
+        function VediRisultati(){
+            
+            var n=( localStorage.getItem("nome") );
+            var c=( localStorage.getItem("cognome"));
+            var p=( localStorage.getItem("punteggio") );
+            var d=( localStorage.getItem("risposte") );
+
+            document.getElementById('ris').innerHTML ="Nome: " + n + "<br> Cognome: " +c+ "<br> Punteggio: "+p+"<br> Domande corrette: "+d;
+        }
+
+    </script>
+</body>
+</html>

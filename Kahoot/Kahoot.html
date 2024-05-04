@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahoot</title>
+</head>
+<body style=" background-color: rgb(102, 203, 71);">
+    <style>
+        .Domanda{
+            margin: 50px 25%;
+            background-color: rgb(7, 182, 7);
+            padding: 20px;
+            border-radius: 10px;
+            border-color: rgb(36, 89, 136);
+            border:200px;
+        }
+    </style>
+    <input type="text" style="width: 150px;padding: 10px;" placeholder="nome" id="nome">
+    <input type="text" style="width: 150px;padding: 10px;" placeholder="cognome" id="cognome">
+  
+    <div class="Domanda">
+        <h2>Domanda 1:</h2>
+        <h3>Quante finali di Champions ha perso il Milan?</h3>
+        <input type="radio" value="0" name="risp1" id="risp1" >2<br>
+        <input type="radio" value="0" name="risp1"id="risp1" >3<br>
+        <input type="radio" value="10" name="risp1" id="risp1a" >4<br>
+        <input type="radio" value="0" name="risp1"id="risp1" >5<br><br>
+        <center>
+        <input type="button" value="Successiva" style="width:200px; height: 40px; background-color:aliceblue;" onclick="salva()"></center>
+        
+    </div>
+    <center><img src="milan.jpeg" width="500px" height="200px"></center>
+
+
+    <script>
+        var punteggiotot=0;
+        var punteggio;
+        var domande=["4","14","Spagna","Parma"];
+        function salva(){
+            var n=document.getElementById("nome").value;
+            var c=document.getElementById("cognome").value;
+            localStorage.setItem("nome",n);
+            localStorage.setItem("cognome",c);
+            
+          
+            if(document.getElementById("risp1a").checked)
+                punteggiotot+=document.getElementById("risp1a").value;
+           
+
+
+            
+            localStorage.setItem("punteggio",punteggiotot);
+            localStorage.setItem("risposte",domande);
+            document.location.href="Kahoot2.html";
+        }
+    </script>
+    
+    
+</body>
+</html>

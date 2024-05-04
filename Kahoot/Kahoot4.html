@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahoot4</title>
+</head>
+<style>
+    .Domanda4{
+            margin: 50px 25%;
+            background-color: rgb(7, 182, 7);
+            padding: 20px;
+            border-radius: 10px;
+            border-color: rgb(36, 89, 136);
+            border:200px;
+        }
+    
+</style>
+<body style=" background-color: rgb(102, 203, 71);"><div class="Domanda4">
+    <h2>Domanda 4:</h2>
+    <h3>Quale italiana ha vinto l'ultima Europa League?</h3>
+    <input type="radio" value="0" name="risp2"  id="risp2">Fiorentina<br>
+    <input type="radio" value="10" name="risp2"id="risp2a" >Parma<br>
+    <input type="radio" value="0" name="risp2"id="risp2" >Juve<br>
+    <input type="radio" value="0" name="risp2"id="risp2" >Milan<br><br>
+    <center><input type="button" value="Successiva" style="width:200px; height: 40px; background-color:aliceblue;" onclick="salva3()"></center>
+</div>
+    <center><img src="EuropaLeague.jpeg"width="500px" height="270px"</center>
+
+
+    <script>
+        function salva3(){
+            var p=( localStorage.getItem("punteggio") )*1;
+            
+
+            if(document.getElementById("risp2a").checked)
+                p=p*1+(document.getElementById("risp2a").value)*1;
+            
+
+
+        localStorage.setItem("punteggio",p);
+        document.location.href="KahootPunteggio.html";
+    }
+    </script>
+    
+</body>
+</html>
