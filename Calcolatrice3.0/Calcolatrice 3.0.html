@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calcolatrice 3.0</title>
+        <style>
+    
+
+   
+    .button{
+        width: 30px;
+        height: 30px;
+    }
+   
+    .txt{
+        border-radius: 10px;
+        height: 40px;
+        border-color: red;
+    }
+
+    .sfondo{
+        background-image:url(calcol.jpg) ;
+        width: 100%;
+        height: 1000px;
+
+    }
+
+    .titolo{
+        margin: 0 42%;
+        font-weight: bolder;
+        font-size: large;
+        color: orangered;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+        </style>
+    </head>
+    <div class="sfondo">
+    <body>
+        <center>
+            <div class="titolo"><h1>Calcolatrice3.0</h1></div>
+            <input type class="txt" id="txt" value="">
+            <br><br><br>
+
+            <input type class="button" value="1" onclick="aggNum(1)">
+            <input type class="button" value="2" onclick="aggNum(2)">
+            <input type class="button" value="3" onclick="aggNum(3)">
+            <input type class="button" value="+" onclick="operzione(1)"><br>
+            <input type class="button" value="4" onclick="aggNum(4)">
+            <input type class="button" value="5" onclick="aggNum(5)">
+            <input type class="button" value="6" onclick="aggNum(6)">
+            <input type class="button" value="-" onclick="operzione(2)"><br>
+            <input type class="button" value="7" onclick="aggNum(7)">
+            <input type class="button" value="8" onclick="aggNum(8)">
+            <input type class="button" value="9" onclick="aggNum(9)">
+            <input type class="button" value="/" onclick="operzione(3)"><br>
+            <input type class="button" value="0" onclick="aggNum(0)">
+            <input type class="button" value="Reset" onclick="resetta()">
+            <input type class="button" value="=" onclick="operzione(5)">
+            <input type class="button" value="*" onclick="operzione(4)">
+            <h1 id="ris"></h1>
+            
+        </div>
+
+        </center>
+        <script>
+            var n1;
+            var n2=0;
+            var tot=0;
+            var n;
+            var cont=0;
+            var c=0;
+            function resetta(){
+                n1=0;tot=0;n2=0;c=0;cont=0;
+            }
+            function aggNum(x){
+                n1="";
+                n=document.getElementById("txt").value;
+                n1=document.getElementById("txt").value=n+x;
+
+
+            }
+            function pulisci(){
+                document.getElementById("txt").value="";
+            }
+            function operzione(x){
+                c++;
+                switch(x){
+                    case 1:
+                        tot=tot*1+n1*1;
+                        pulisci();
+                        if(c%2!=0)
+                            n2=n1;
+                        cont=1;
+                        break;
+                    
+                    case 2:
+                        if(c==1){
+                            tot=n1;
+                            n2=n1;}
+
+                        else
+                            tot=tot*1-n1*1;
+                        pulisci();
+                        cont=2;
+                        break;
+                    
+                    case 3:
+                        if(c==1){
+                            tot=n1;
+                            n2=n1;}
+
+                        else
+                            tot=tot*1/n1*1;
+                        pulisci();
+                        cont=3;
+                        break;
+
+                    case 4:
+                    if(c==1){
+                            tot=n1;
+                            n2=n1;}
+
+                        else
+                            tot=(tot*1)*(n1*1);
+                        pulisci();
+                        cont=4;
+                        break;
+                    case 5:
+                        pulisci();
+                        if(cont==1)
+                            tot=(tot*1+n1*1);
+                        if(cont==2)
+                            tot=(tot*1-n1*1);
+                        if(cont==3)
+                            tot=(tot*1/n1*1);
+                        if(cont==4)
+                            tot=(tot*1*n1*1);
+                        document.getElementById('ris').innerHTML=tot;
+                         break;
+
+                }
+            }
+        </script>
+    </body>
+</html>
