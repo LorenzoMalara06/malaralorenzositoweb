@@ -1,0 +1,84 @@
+#pagina{
+    width: 100%;
+    
+}
+#title{
+    margin: 0 43%;
+    color: aqua;
+}
+ul{
+    display: inline;
+    overflow: hidden;
+    list-style-type: none;
+}
+li{
+    margin: 0 10px;
+    float: left;
+    text-decoration: none;
+    padding: 0 20px;
+    border: 1px solid aqua;
+    
+}
+
+
+#cerca{
+    float: right;
+  
+}
+#img1{
+    margin: 100px 38%;
+    
+   
+}
+#testo{
+    margin:0 auto;
+}
+#ctesto1{
+    float: left;
+    margin: 0 25%;
+    color: aqua;
+}
+#ctesto2{
+    float: left;
+    color: aqua;
+    
+}
+#img2{
+    float: left;
+    margin: 45px 23.7%;
+    width:350px;
+    background-color: aqua;
+   
+}
+#img3{
+    float:left;
+margin: 45px 0;
+    width:350px;
+    background-color: aqua;
+}
+
+
+#piede{
+    clear:both;
+    width: 100%;
+    margin: 100px 0px;
+}
+#bottone{
+    font-size: 1rem;text-transform: uppercase;background: aqua;color: #fff;
+    text-decoration: none;padding: 14px 190px;display: inline-block;
+    border-radius: 25px;font-weight: 700;
+}
+#bottone:hover{background: blue;}
+#bottone2{
+    font-size: 1rem;text-transform: uppercase;background: aqua;color: #fff;
+    text-decoration: none;padding: 14px 190px;display: inline-block;
+    border-radius: 25px;font-weight: 700;
+}
+#bottone2:hover{background: blue;}
+
+#bottone3{
+    font-size: 1rem;text-transform: uppercase;background: aqua;color: #fff;
+    text-decoration: none;padding: 14px 180px;display: inline-block;
+    border-radius: 25px;font-weight: 700;
+}
+#bottone3:hover{background: blue;}
