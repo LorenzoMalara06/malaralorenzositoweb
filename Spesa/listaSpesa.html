@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stile.css">
+    <title>Lista Della Spesa</title>
+</head>
+<body style="font-size:larger;color: blue;font-weight: bolder;">
+    <script>
+            var data = [localStorage.getItem("lista")];
+        console.log(data);
+        data = data[0].split(",");
+        var cont=0;
+        for(var i=0; i<data.length; i++){
+            var salva = document.createElement("div");
+            salva.innerHTML = data[i];
+            salva.className = "container";
+            document.body.appendChild(salva);
+            var btn = document.createElement("button");
+            document.body.appendChild(btn);
+            btn.className = "buttons";
+            btn.id="parte2";
+            btn.innerHTML = "-";
+            btn.onclick = elimina;
+            btn.value = cont;
+            cont++;
+        }
+
+   
+        function elimina(){
+            var x=event.currentTarget.value;
+            var y=document.getElementsByClassName("container");
+            var z=document.getElementsByClassName("buttons");
+            var n1=y[x];
+            var n2=z[x];
+            n1.style.display='none';
+            n2.style.display='none';
+        
+        }
+
+        </script>
+    
+</body>
+</html>

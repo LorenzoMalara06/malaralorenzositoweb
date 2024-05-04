@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stile.css">
+    <title>Invio</title>
+</head>
+<body>
+
+<center>
+    <input type="button" id="fine" value="invia" onclick="invia()" style="height: 45px;width: 170px;border-radius: 20px;background-color: rgb(36, 36, 113); "><br><br>
+    <input type="text" class="txt1" placeholder="Inserisci elemento alla spesa" style="width: 175px;height: 20px;border-radius: 15px;">
+    <input type="button" id="btn1" value="+" onclick="agg()" style="height: 28px;width: 35px; border-radius: 15px;background-color: firebrick;"><br>
+</center>
+    <script>
+        var dati=[];
+        var c=0;
+        function agg(){
+            var e=document.getElementsByClassName("txt1");
+            var e1=e[c].value;
+            dati.push(e1);
+            var salva=document.createElement("input");
+            salva.className="txt1";
+            salva.id="parte1";
+            document.body.appendChild(salva);
+            var b=document.createElement("button");
+            b.className="stile";
+            document.body.appendChild(b);
+            b.innerHTML="+";
+            var br=document.createElement("br");
+            document.body.appendChild(br);
+            b.onclick=agg;
+            c++;
+        }
+        function invia(){
+            localStorage.setItem("lista",dati);
+            document.location.href="listaSpesa.html";
+        }
+
+    </script>
+</body>
+</html>

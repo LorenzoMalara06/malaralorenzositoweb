@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Marca: </h2><h3 id="txt"></h3>
+    <h2> Colore:</h2> <h3 id="txt2"></h3>
+    <h2> Targa: </h2><h3 id="txt3"></h3>
+    <h2> Proprietario:</h2> <h3 id="txt4"></h3>
+    <script>
+        var url=document.location.search.substring(1); 
+        var url1=url.split("&")[0];
+        var url2=url.split("&")[1];
+        var url3=url.split("&")[2];
+        var url4=url.split("&")[3];
+        var m=url1.substr(3); 
+        var c=url2.substr(3);
+        var t=url3.substr(3); 
+        var p=url4.substr(3);
+        document.getElementById("txt").innerHTML=m;
+        document.getElementById("txt2").innerHTML=c;
+        document.getElementById("txt3").innerHTML=t;
+        document.getElementById("txt4").innerHTML=p;
+    </script>
+    <p></p>
+    
+</body>
+</html>
