@@ -1,0 +1,20 @@
+
+[
+    {
+        "Nome": "Mario",
+        "Cognome": "Rossi",
+        "Età": 30,
+        "Indirizzo": "Via Roma 1",
+        "Città": "Milano",
+        "Telefono": "123456789"
+
+    },
+    {
+        "Nome": "Giulia",
+        "Cognome": "Verdi",
+        "Età": 25,
+        "Indirizzo": "Via Milano 2",
+        "Città": "Torino",
+        "Telefono": "0987654321"
+    }
+]
