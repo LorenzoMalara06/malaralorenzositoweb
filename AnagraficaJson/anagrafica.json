@@ -16,5 +16,29 @@
         "Indirizzo": "Via Milano 2",
         "Città": "Torino",
         "Telefono": "0987654321"
+    },
+     {
+        "Nome": "Claudio",
+        "Cognome": "D'urso",
+        "Età": 30,
+        "Indirizzo": "Via risorgimanto 6b",
+        "Città": "Arezzo",
+        "Telefono": "6543278953"
+    },
+     {
+        "Nome": "Giuseppina",
+        "Cognome": "Rossi",
+        "Età": 87,
+        "Indirizzo": "Via brombeis 5",
+        "Città": "Bergamo",
+        "Telefono": "8925617825"
+    },
+     {
+        "Nome": "Manuel",
+        "Cognome": "Cristamnte",
+        "Età": 44,
+        "Indirizzo": "Via colosseo 11",
+        "Città": "Roma",
+        "Telefono": "5638935624"
     }
 ]
