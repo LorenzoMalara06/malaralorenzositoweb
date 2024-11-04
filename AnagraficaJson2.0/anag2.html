@@ -50,7 +50,7 @@ xmlhttp.onload=function(){
             const riga=document.createElement('tr');
             riga.innerHTML="<td> "+pers.Nome+"</td><td>"+pers.Cognome+"</td><td>"+pers.Età+"</td><td>"+pers.Indirizzo+"</td><td>"+pers.Città+"</td>";
             for(x in dati.telefono){
-                riga+="<td>"+pers.dati.telefono[x]+"</td>";
+                riga+="<td>"+pers.telefono[x]+"</td>";
             }
             tabella.appendChild(riga);}
 } else{
