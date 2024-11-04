@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <title>Anagrafica</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        tr, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        td {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Anagrafica</h1>
+<table id="Table">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Cognome</td>
+            <td>Età</td>
+            <td>Indirizzo</td>
+            <td>Città</td>
+            <td>Telefono</td>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+
+const xmlhttp= new XMLHttpRequest();
+xmlhttp.open('GET','anagrafica2.json');
+xmlhttp.onload=function(){
+    if(xmlhttp.status===200){
+        const dati=JSON.parse(xmlhttp.responseText);
+        const tabella=document.getElementById('Table').tBodies[0];
+        for (let i=0;i<dati.length;i++){
+            const pers=dati[i];
+            const riga=document.createElement('tr');
+            riga.innerHTML="<td> "+pers.Nome+"</td><td>"+pers.Cognome+"</td><td>"+pers.Età+"</td><td>"+pers.Indirizzo+"</td><td>"+pers.Città+"</td>";
+            for(x in dati.telefono){
+                riga+="<td>"+dati.telefono[x]+"</td>"
+            }
+            tabella.appendChild(riga);}
+} else{
+alert('Si è presentato un errore nel caricare i dati.');}}
+xmlhttp.send();
+
+</script>
+
+</body>
+</html>
