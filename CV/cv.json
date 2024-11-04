@@ -1,0 +1,12 @@
+[
+    {
+      "Nome": "Mario",
+      "Cognome": "Rossi",
+      "Età": 30,
+      "Indirizzo": "Via Roma 1",
+      "Città": "Milano",
+      "Telefoni": ["123456789", "987654321"],
+      "Email": "mario.rossi@example.com",
+      "Immagine": "mario.jpeg",
+      "CV": "mario_cv.json"
+    }]

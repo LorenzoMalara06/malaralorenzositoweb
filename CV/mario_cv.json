@@ -1,0 +1,19 @@
+{
+    "Nome": "Mario Rossi",
+    "Data di Nascita": "1993-01-15",
+    "Istruzione": [
+      {
+        "Titolo": "Laurea in Informatica",
+        "Istituto": "Università di Milano",
+        "Anno": 2015
+      }
+    ],
+    "Esperienza": [
+      {
+        "Posizione": "Sviluppatore Web",
+        "Azienda": "XYZ Srl",
+        "Anno": 2016
+      }
+    ],
+    "Competenze": ["JavaScript", "HTML", "CSS"]
+  }
