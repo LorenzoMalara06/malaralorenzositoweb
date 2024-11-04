@@ -22,6 +22,7 @@
 <body>
 
 <h1>Anagrafica</h1>
+    <table id="Table">
     <thead>
         <tr>
             <td>Nome</td>
@@ -32,7 +33,7 @@
             <td>Telefono</td>
         </tr>
     </thead>
-    <tbody id="Table">
+    <tbody>
     </tbody>
 </table>
 
@@ -43,38 +44,13 @@ xmlhttp.open('GET','anagrafica2.json');
 xmlhttp.onload=function(){
     if(xmlhttp.status===200){
         const dati=JSON.parse(xmlhttp.responseText);
-        const tabella=document.getElementById('Table');
+        const tabella=document.getElementById('Table').tBodies[0];
         for (let i=0;i<dati.length;i++){
-            const person=dati[i];
-            const row=document.createElement('tr');
-            
-            var cellNome = document.createElement('td');
-                cellNome.innerText = person.Nome;
-
-                var cellCognome = document.createElement('td');
-                cellCognome.innerText = person.Cognome;
-
-                var cellEta = document.createElement('td');
-                cellEta.innerText = person.Età;
-
-                var cellIndirizzo = document.createElement('td');
-                cellIndirizzo.innerText = person.Indirizzo;
-
-                var cellCittà = document.createElement('td');
-                cellCittà.innerText = person.Città;
-
-                var cellTelefoni = document.createElement('td');
-                cellTelefoni.innerText = person.telefono.join(", "); 
-
-                row.appendChild(cellNome);
-                row.appendChild(cellCognome);
-                row.appendChild(cellEta);
-                row.appendChild(cellIndirizzo);
-                row.appendChild(cellCittà);
-                row.appendChild(cellTelefoni);
-                row.appendChild(cellEmail);
+            const pers=dati[i];
+            const riga=document.createElement('tr');
+            riga.innerHTML = `<td>${pers.nome}</td><td>${pers.cognome}</td><td>${pers.eta}</td><td>${pers.indirizzo}</td><td>${pers.citta}</td><td>${pers.telefono}</td>`;
            
-            tabella.appendChild(row);}
+            tabella.appendChild(riga);}
 } else{
 alert('Si è presentato un errore nel caricare i dati.');}}
 xmlhttp.send();
