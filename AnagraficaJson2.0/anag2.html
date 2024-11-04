@@ -49,7 +49,7 @@ xmlhttp.onload=function(){
             const pers=dati[i];
             const riga=document.createElement('tr');
             riga.innerHTML="<td> "+pers.Nome+"</td><td>"+pers.Cognome+"</td><td>"+pers.Età+"</td><td>"+pers.Indirizzo+"</td><td>"+pers.Città+"</td>";
-            for(x in dati.telefono){
+            for(var x=0;x<telefono.length;x++){
                 riga+="<td>"+pers.telefono[x]+"</td>";
             }
             tabella.appendChild(riga);}
