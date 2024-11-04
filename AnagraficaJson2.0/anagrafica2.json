@@ -5,7 +5,7 @@
         "Età": 30,
         "Indirizzo": "Via costantino",
         "Città": "Milano",
-        "telefono":["+39 331 302 9302","+39 983 834 3328","+39 342 455 9835"]
+        "Telefoni":["+39 331 302 9302","+39 983 834 3328","+39 342 455 9835"]
 
     },
     {
@@ -14,7 +14,7 @@
         "Età": 25,
         "Indirizzo": "Via Milano 2",
         "Città": "Torino",
-        "telefono":["+15 384 394 9383","+15 348 929 3483"]            
+        "Telefoni":["+15 384 394 9383","+15 348 929 3483"]            
         },
       {
         "Nome": "Claudio",
@@ -22,7 +22,7 @@
         "Età": 30,
         "Indirizzo": "Via risorgimanto",
         "Città": "Arezzo",
-        "telefono": ["+29 893 302 3940","+29 223 334 4594"]
+        "Telefoni": ["+29 893 302 3940","+29 223 334 4594"]
     },
      {
         "Nome": "Giuseppina",
@@ -30,7 +30,7 @@
         "Età": 87,
         "Indirizzo": "Via brombeis 5",
         "Città": "Bergamo",
-        "telefono": "+33 948 389 3023"
+        "Telefoni":[ "+33 948 389 3023"]
     },
      {
         "Nome": "Manuel",
@@ -38,7 +38,7 @@
         "Età": 44,
         "Indirizzo": "Via colosseo 11",
         "Città": "Roma",
-        "telefono": "+12 937 490 3920"
+        "Telefoni": ["+12 937 490 3920"]
     }
 ]
     
