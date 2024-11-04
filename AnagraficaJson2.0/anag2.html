@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.">
@@ -9,7 +9,7 @@
             width: 100%;
             border-collapse: collapse;
         }
-        tr, th {
+        th, td {
             border: 1px solid black;
             padding: 8px;
             text-align: left;
@@ -21,8 +21,9 @@
 </head>
 <body>
 
-<h1>Anagrafica</h1>
-    <table id="Table">
+<h1>Elenco Anagrafica</h1>
+
+<table>
     <thead>
         <tr>
             <th>Nome</th>
@@ -30,31 +31,63 @@
             <th>Età</th>
             <th>Indirizzo</th>
             <th>Città</th>
-            <th>Telefono</th>
+            <th>Telefoni</th>
+            <th>Email</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="tableBody">
     </tbody>
 </table>
 
 <script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'anagrafica2.json', true); 
 
-const xmlhttp= new XMLHttpRequest();
-xmlhttp.open('GET','anagrafica2.json');
-xmlhttp.onload=function(){
-    if(xmlhttp.status===200){
-        const dati=JSON.parse(xmlhttp.responseText);
-        const tabella=document.getElementById('Table').tBodies[0];
-        for (let i=0;i<dati.length;i++){
-            const pers=dati[i];
-            const riga=document.createElement('tr');
-            riga.innerHTML= `<td>${pers.Nome}</td><td>${pers.Cognome}</td><td>${pers.Età}</td><td>${pers.Indirizzo}</td><td>${pers.Città}</td><td>${pers.telefono}</td>`;
-           
-            tabella.appendChild(riga);}
-} else{
-alert('Si è presentato un errore nel caricare i dati.');}}
-xmlhttp.send();
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText); 
 
+            var tableBody = document.getElementById('tableBody');
+
+            
+            for (var i = ; i < data.length; i++) {
+                var person = data[i];
+                var row = document.createElement('tr');
+
+               
+                var cellNome = document.createElement('td');
+                cellNome.innerText = person.Nome;
+
+                var cellCognome = document.createElement('td');
+                cellCognome.innerText = person.Cognome;
+
+                var cellEta = document.createElement('td');
+                cellEta.innerText = person.Età;
+
+                var cellIndirizzo = document.createElement('td');
+                cellIndirizzo.innerText = person.Indirizzo;
+
+                var cellCittà = document.createElement('td');
+                cellCittà.innerText = person.Città;
+
+                var cellTelefoni = document.createElement('td');
+                cellTelefoni.innerText = person.Telefoni.join(", ");
+
+                row.appendChild(cellNome);
+                row.appendChild(cellCognome);
+                row.appendChild(cellEta);
+                row.appendChild(cellIndirizzo);
+                row.appendChild(cellCittà);
+                row.appendChild(cellTelefoni);
+
+                tableBody.appendChild(row);
+            }
+        } else {
+            console.error('Errore nel caricamento dei dati: ' + xhr.statusText);
+        }
+    };
+
+    xhr.send();
 </script>
 
 </body>
