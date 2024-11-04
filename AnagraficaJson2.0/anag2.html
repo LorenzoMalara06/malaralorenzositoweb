@@ -48,10 +48,8 @@ xmlhttp.onload=function(){
         for (let i=0;i<dati.length;i++){
             const pers=dati[i];
             const riga=document.createElement('tr');
-            riga.innerHTML="<td> "+pers.Nome+"</td><td>"+pers.Cognome+"</td><td>"+pers.Età+"</td><td>"+pers.Indirizzo+"</td><td>"+pers.Città+"</td>";
-            for(var x=0;x<telefono.length;x++){
-                riga+="<td>"+pers.telefono[x]+"</td>";
-            }
+            riga.innerHTML="<td> "+pers.Nome+"</td><td>"+pers.Cognome+"</td><td>"+pers.Età+"</td><td>"+pers.Indirizzo+"</td><td>"+pers.Città+"</td><td>"+pers.telefono.join(", ")+"</td>";
+           
             tabella.appendChild(riga);}
 } else{
 alert('Si è presentato un errore nel caricare i dati.');}}
