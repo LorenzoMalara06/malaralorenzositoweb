@@ -22,7 +22,6 @@
 <body>
 
 <h1>Anagrafica</h1>
-<table id="Table">
     <thead>
         <tr>
             <td>Nome</td>
@@ -33,7 +32,7 @@
             <td>Telefono</td>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="Table">
     </tbody>
 </table>
 
@@ -44,7 +43,7 @@ xmlhttp.open('GET','anagrafica2.json');
 xmlhttp.onload=function(){
     if(xmlhttp.status===200){
         const dati=JSON.parse(xmlhttp.responseText);
-        const tabella=document.getElementById('Table').tBodies[0];
+        const tabella=document.getElementById('Table');
         for (let i=0;i<dati.length;i++){
             const person=dati[i];
             const row=document.createElement('tr');
