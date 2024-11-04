@@ -70,8 +70,8 @@
     cellImmagine.appendChild(img);
     row.appendChild(cellImmagine);
    
-    <a href="mario_cv.json" target="_blank">
-    <img src="mario.jpeg" alt="Immagine di Mario Rossi"> 
+   /* <a href="mario_cv.json" target="_blank">
+    <img src="mario.jpeg" alt="Immagine di Mario Rossi"> */
 
     var cellNome = document.createElement('td');
     cellNome.textContent = person.Nome;
@@ -101,13 +101,13 @@
     cellEmail.textContent = person.Email;
     row.appendChild(cellEmail);
 
-    /*var cellCV = document.createElement('td');
+    var cellCV = document.createElement('td');
     var linkCV = document.createElement('a');
     linkCV.href = person.CV;
     linkCV.textContent = "Visualizza CV";
     linkCV.target = "_blank"; // utilizzata per aprire una nuova scheda 
     cellCV.appendChild(linkCV);
-    row.appendChild(cellCV);*/
+    row.appendChild(cellCV);
 
 
     tableBody.appendChild(row);
