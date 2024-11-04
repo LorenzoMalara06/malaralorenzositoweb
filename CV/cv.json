@@ -5,8 +5,8 @@
       "Età": 30,
       "Indirizzo": "Via Roma 1",
       "Città": "Milano",
-      "Telefoni": ["123456789", "987654321"],
-      "Email": "mario.rossi@example.com",
+      "Telefoni": ["+39 331 372 7389", "+38 874 837 2633"],
+      "Email": "mario.rossi@gmail.com",
       "Immagine": "mario.jpeg",
-      "CV": "mario_cv.json"
+      "CV": "mario_cv.json" //collegamento ad un'altra pagina da fare che poi si ricolleghi al mario_cv.json
     }]
