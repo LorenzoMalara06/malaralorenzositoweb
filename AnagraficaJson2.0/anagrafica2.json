@@ -1,15 +1,15 @@
  [
     {
         "Nome": "Mario",
-        "Cognome": "Rossi",
+        "Cognome": "Caruso",
         "Età": 30,
-        "Indirizzo": "Via Roma 1",
+        "Indirizzo": "Via costantino",
         "Città": "Milano",
         "telefono":["+39 331 302 9302","+39 983 834 3328","+39 342 455 9835"]
 
     },
     {
-        "Nome": "Giulia",
+        "Nome": "Giuseppe",
         "Cognome": "Verdi",
         "Età": 25,
         "Indirizzo": "Via Milano 2",
@@ -22,7 +22,7 @@
         "Età": 30,
         "Indirizzo": "Via risorgimanto",
         "Città": "Arezzo",
-        "Telefono": ["+29 893 302 3940","+29 223 334 4594"]
+        "telefono": ["+29 893 302 3940","+29 223 334 4594"]
     },
      {
         "Nome": "Giuseppina",
@@ -30,7 +30,7 @@
         "Età": 87,
         "Indirizzo": "Via brombeis 5",
         "Città": "Bergamo",
-        "Telefono": "+33 948 389 3023"
+        "telefono": "+33 948 389 3023"
     },
      {
         "Nome": "Manuel",
@@ -38,7 +38,7 @@
         "Età": 44,
         "Indirizzo": "Via colosseo 11",
         "Città": "Roma",
-        "Telefono": "+12 937 490 3920"
+        "telefono": "+12 937 490 3920"
     }
 ]
     
