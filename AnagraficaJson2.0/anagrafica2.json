@@ -16,5 +16,30 @@
         "Città": "Torino",
         "telefono":["+15 384 394 9383","+15 348 929 3483"]            
         }
+      {
+        "Nome": "Claudio",
+        "Cognome": "fuso",
+        "Età": 30,
+        "Indirizzo": "Via risorgimanto",
+        "Città": "Arezzo",
+        "Telefono": ["+29 893 302 3940","+29 223 334 4594"]
+    },
+     {
+        "Nome": "Giuseppina",
+        "Cognome": "Rossi",
+        "Età": 87,
+        "Indirizzo": "Via brombeis 5",
+        "Città": "Bergamo",
+        "Telefono": "+33 948 389 3023"
+    },
+     {
+        "Nome": "Manuel",
+        "Cognome": "Cristante",
+        "Età": 44,
+        "Indirizzo": "Via colosseo 11",
+        "Città": "Roma",
+        "Telefono": "+12 937 490 3920"
+    }
+]
     
 ]
