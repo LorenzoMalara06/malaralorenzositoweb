@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Europass</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+ margin: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2, h3 {
+           color: #005EB8;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .profile-image {
+           : right;
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+           : 1px solid #ccc;
+        }
+        .section-title {
+            font-size: 1.2em;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-bottom: 2px solid #005EB8;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'mario_cv.json', true); 
+
+ 
+        xhr.onload = function() {
+        if (xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText);
+            for (var i = 0; i < data.length; i++) {
+                var person = data[i];
+
+                var ind=person.Indirizzo;
+                console.log(ind);
+                const messageContainer = document.getElementById("Indirizzo");
+                messageContainer.textContent =ind;
+            
+            
+            }    
+  }
+ };
+
+
+ xhr.send();
+
+
+    </script>
+
+
+<div class="container">
+    <h1>Nome Cognome</h1>
+<img src="mario.jpeg" alt="Foto di Nome Cognome" class="profile-image" width="150" height="150">
+
+ <div class="section">
+  <div class="section-title">Informazioni personali</div>
+  <p><strong>Indirizzo:</strong><p id="Indirizzo"></p></p>
+  <p><strong>Telefono:</strong> +39 012 345 6789</p>
+  <p><strong>Email:</strong> email@example.com</p>
+  <p><strong>Data di nascita:</strong> 1 gennaio 199</p>
+  <p><strong>Nazionalità:</strong> Italiana</p>
+ </div>
+
+ <div class="section">
+  <div class="section-title">Esperienza lavorativa</div>
+  <h3>Nome Azienda - Ruolo</h3>
+  <p><strong>Data:</strong> Gennaio 202 - Presente</p>
+  <p>Descrizione delle responsabilità e dei risultati ottenuti nel ruolo.</p>
+
+  <h3>Nome Azienda - Ruolo Precedente</h3>
+  <p><strong>Data:</strong> Giugno 2018 - Dicembre 2019</p>
+  <p>Descrizione delle responsabilità e dei risultati ottenuti nel ruolo precedente.</p>
+ </div>
+
+ <div class="section">
+  <div class="section-title">Istruzione e formazione</div>
+  <h3>Nome Università - Laurea</h3>
+  <p><strong>Data:</strong> Settembre 2014 - Giugno 2018</p>
+  <p>Descrizione del corso di studi e delle principali materie trattate.</p>
+ </div>
+
+ <div class="section">
+  <div class="section-title">Competenze personali</div>
+  <h3>Lingue straniere</h3>
+  <p><strong>Italiano:</strong> Madrelingua</p>
+  <p><strong>Inglese:</strong> C1 - Avanzato</p>
+
+  <h3>Competenze informatiche</h3>
+  <p>Utilizzo avanzato di Microsoft Office, competenze in programmazione (Python, Java).</p>
+ </div>
+
+ <div class="section">
+  <div class="section-title">Referenze</div>
+  <p>Disponibili su richiesta.</p>
+ </div>
+</div>
+
+</body>
+</html>
