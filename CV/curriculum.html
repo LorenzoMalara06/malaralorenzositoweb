@@ -47,8 +47,11 @@
             for (var i = 0; i < data.length; i++) {
                 var person = data[i];
 
-                var ind.textContent=person.Indirizzo;
-                Indirizzo.appendChild(ind);
+
+                 var cellIndirizzo = document.createElement('p');
+                cellIndirizzo.textContent = person.Indirizzo;
+                Indiri.appendChild(cellIndirizzo);
+                
             
             
             }    
@@ -68,7 +71,7 @@
 
  <div class="section">
   <div class="section-title">Informazioni personali</div>
-  <p><strong>Indirizzo:</strong><p id="Indirizzo"></p></p>
+  <p><strong>Indirizzo:</strong><p id="Indiri"></p></p>
   <p><strong>Telefono:</strong> +39 012 345 6789</p>
   <p><strong>Email:</strong> email@example.com</p>
   <p><strong>Data di nascita:</strong> 1 gennaio 199</p>
