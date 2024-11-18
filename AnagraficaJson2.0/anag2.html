@@ -51,34 +51,34 @@
             
             for (var i = 0; i < data.length; i++) {
                 var person = data[i];
-                var row = document.createElement('tr');
+                var riga = document.createElement('tr');
 
                
-                var cellNome = document.createElement('td');
-                cellNome.textContent = person.Nome;
-                row.appendChild(cellNome);
+                var Nome = document.createElement('td');
+                Nome.textContent = person.Nome;
+                riga.appendChild(Nome);
 
-                var cellCognome = document.createElement('td');
-                cellCognome.textContent = person.Cognome;
-                row.appendChild(cellCognome);
+                var Cognome = document.createElement('td');
+                Cognome.textContent = person.Cognome;
+                riga.appendChild(Cognome);
 
-                var cellEtà = document.createElement('td');
-                cellEtà.textContent = person.Età;
-                row.appendChild(cellEtà);
+                var Età = document.createElement('td');
+                Età.textContent = person.Età;
+                riga.appendChild(Età);
 
-                var cellIndirizzo = document.createElement('td');
-                cellIndirizzo.textContent = person.Indirizzo;
-                row.appendChild(cellIndirizzo);
+                var Indirizzo = document.createElement('td');
+                Indirizzo.textContent = person.Indirizzo;
+                riga.appendChild(Indirizzo);
 
-                var cellCittà = document.createElement('td');
-                cellCittà.textContent = person.Città;
-                row.appendChild(cellCittà);
+                var Città = document.createElement('td');
+                Città.textContent = person.Città;
+                riga.appendChild(Città);
 
-                var cellTelefoni = document.createElement('td');
-                cellTelefoni.textContent = person.Telefoni.join(', '); 
-                row.appendChild(cellTelefoni);
+                var Telefoni = document.createElement('td');
+                Telefoni.textContent = person.Telefoni.join(', '); 
+                riga.appendChild(Telefoni);
 
-                tableBody.appendChild(row);
+                tableBody.appendChild(riga);
             }
         } else {
             console.error('Errore nel caricamento dei dati: ' + xhr.statusText);
