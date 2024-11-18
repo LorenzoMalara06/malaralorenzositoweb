@@ -23,7 +23,7 @@
 
 <h1>Elenco Anagrafica</h1>
 
-<table id="tableBody">
+<table id="table">
     <thead>
         <tr>
             <th>Nome</th>
@@ -46,7 +46,7 @@
         if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText); 
 
-            var tableBody = document.getElementById('tableBody');
+            var table= document.getElementById('table');
 
             
             for (var i = 0; i < data.length; i++) {
@@ -78,7 +78,7 @@
                 Telefoni.textContent = person.Telefoni.join(', '); 
                 riga.appendChild(Telefoni);
 
-                tableBody.appendChild(riga);
+                table.appendChild(riga);
             }
         } else {
             console.error('Errore nel caricamento dei dati: ' + xhr.statusText);
