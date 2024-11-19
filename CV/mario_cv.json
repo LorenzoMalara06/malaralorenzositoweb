@@ -5,13 +5,11 @@
     "Città": "Milano",
     "Telefoni": ["+39 331 372 7389", "+38 874 837 2633"],
     "Email": "mario.rossi@gmail.com",
-    "Istruzione": [
-      {
-        "Titolo": "Laurea in Informatica",
-        "Istituto": "Università di Milano",
-        "Anno": 2015
-      }
-    ],
+    
+    "Titolo": "Laurea in Informatica",
+    "Istituto": "Università di Milano",
+    "Anno": "29-08-2015",
+    
     "Esperienza": [
       {
         "Posizione": "Sviluppatore Web",
