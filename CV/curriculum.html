@@ -48,8 +48,11 @@
                 var person = data[i];
 
                 const indiri = document.getElementById("Indiri"); 
-                indiri.innerHTML = person.Indirizzo;                
-            
+                indiri.innerHTML = person.Indirizzo;    
+                const nom = document.getElementById("nome"); 
+                nom.innerHTML = person.Nome;  
+                const co = document.getElementById("cognome"); 
+                co.innerHTML = person.Cognome;  
             
             }    
   }
@@ -63,7 +66,7 @@
 
 
 <div class="container">
-    <h1>Nome Cognome</h1>
+    <h1 id="nome"></h1><h1 id="cognome"></h1>
 <img src="mario.jpeg" alt="Foto di Nome Cognome" class="profile-image" width="150" height="150">
 
  <div class="section">
