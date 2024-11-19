@@ -57,6 +57,9 @@
                 em.innerHTML = person.Email;  
                 const da = document.getElementById("data"); 
                 da.innerHTML = person.DatadiNascita; 
+
+                const ti = document.getElementById("Tit"); 
+                ti.innerHTML = person.Istruzione.Titolo; 
             
             }    
   }
@@ -84,12 +87,12 @@
 
  <div class="section">
   <div class="section-title">Esperienza lavorativa</div>
-  <h3>Nome Azienda - Ruolo</h3>
+  <h3>Istruzione</h3>
   <p><strong>Data:</strong> Gennaio 202 - Presente</p>
   <p>Descrizione delle responsabilità e dei risultati ottenuti nel ruolo.</p>
 
   <h3>Nome Azienda - Ruolo Precedente</h3>
-  <p><strong>Data:</strong> Giugno 2018 - Dicembre 2019</p>
+  <p><strong>Titolo di studio:</strong><p id="Tit"></p></p>
   <p>Descrizione delle responsabilità e dei risultati ottenuti nel ruolo precedente.</p>
  </div>
 
