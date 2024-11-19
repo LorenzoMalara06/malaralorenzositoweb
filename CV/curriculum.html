@@ -53,6 +53,10 @@
                 nom.innerHTML = person.Nome;  
                 const tele = document.getElementById("Tel"); 
                 tele.innerHTML = person.Telefoni;  
+                const em = document.getElementById("email"); 
+                em.innerHTML = person.Email;  
+                const da = document.getElementById("data"); 
+                da.innerHTML = person.Datadinascita; 
             
             }    
   }
@@ -73,8 +77,8 @@
   <div class="section-title">Informazioni personali</div>
   <p><strong>Indirizzo:</strong><p id="Indiri"></p></p>
   <p><strong>Telefono:</strong><p id="Tel"></p></p>
-  <p><strong>Email:</strong> email@example.com</p>
-  <p><strong>Data di nascita:</strong> 1 gennaio 199</p>
+  <p><strong>Email:</strong><p id="email"></p></p>
+  <p><strong>Data di nascita:</strong><p id="data"></p></p>
   <p><strong>Nazionalità:</strong> Italiana</p>
  </div>
 
