@@ -51,8 +51,8 @@
                 indiri.innerHTML = person.Indirizzo;    
                 const nom = document.getElementById("nome"); 
                 nom.innerHTML = person.Nome;  
-                const co = document.getElementById("cognome"); 
-                co.innerHTML = person.Cognome;  
+                const tele = document.getElementById("Tel"); 
+                tele.innerHTML = person.Telefono;  
             
             }    
   }
@@ -66,13 +66,13 @@
 
 
 <div class="container">
-    <h1 id="nome"></h1><h1 id="cognome"></h1>
+    <h1 id="nome"></h1>
 <img src="mario.jpeg" alt="Foto di Nome Cognome" class="profile-image" width="150" height="150">
 
  <div class="section">
   <div class="section-title">Informazioni personali</div>
   <p><strong>Indirizzo:</strong><p id="Indiri"></p></p>
-  <p><strong>Telefono:</strong> +39 012 345 6789</p>
+  <p><strong>Telefono:</strong><p id="Tel"></p></p>
   <p><strong>Email:</strong> email@example.com</p>
   <p><strong>Data di nascita:</strong> 1 gennaio 199</p>
   <p><strong>Nazionalità:</strong> Italiana</p>
