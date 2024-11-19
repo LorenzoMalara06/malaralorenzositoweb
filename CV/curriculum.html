@@ -47,11 +47,8 @@
             for (var i = 0; i < data.length; i++) {
                 var person = data[i];
 
-
-                 var cellIndirizzo = document.createElement('p');
-                cellIndirizzo.textContent = person.Indirizzo;
-                Indiri.appendChild(cellIndirizzo);
-                
+                const indiri = document.getElementById("Indiri"); 
+                indiri.innerHTML = person.Indirizzo;                
             
             
             }    
