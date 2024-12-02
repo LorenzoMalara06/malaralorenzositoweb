@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Portfolio</title>
+</head>
+<body>
+    <script>
+
+
+    let lettore=new XMLHttpRequest();
+    lettore.open('GET', port.xml, true);
+    lettore.onreadystatechange=function(){
+        if(this.status==200 && this.readyState==4){
+            const obj=this.responseXML;
+            const  output=document.getElementById("Contenitore Link")
+            obj.getElementsByTagName("Dati")[0].childNodes.forEach(lavori=>{
+                let a=document.createElement("a");
+                a.innerText=lavoro.getElementsByTagName("titolo")[0] 
+                a.href=lavoro.getElementsByTagName("lavoro")[0] 
+                output.appendChild(a);
+            });
+        }else{
+            alert("Errore caricamento file XML")
+        
+        }
+    }
+    lettore.send();
+
+    </script>
+</body>
