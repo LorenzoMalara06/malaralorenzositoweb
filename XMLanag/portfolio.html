@@ -9,7 +9,7 @@
 
 
     let lettore=new XMLHttpRequest();
-    lettore.open('GET', port.xml, true);
+    lettore.open('GET', 'port.xml', true);
     lettore.onreadystatechange=function(){
         if(this.status==200 && this.readyState==4){
             const obj=this.responseXML;
