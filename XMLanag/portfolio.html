@@ -18,7 +18,7 @@
                 let a=document.createElement("a");
                 a.innerText=lavori.getElementsByTagName("titolo")[0].textContent;
                 a.href=lavori.getElementsByTagName("lavoro")[0].textContent;
-                output.appendChild(a);
+                spazio.appendChild(a);
             });
         }else{
             alert("Errore caricamento file XML")
@@ -28,4 +28,5 @@
     lettore.send();
 
     </script>
+    <div id="spazio"></div>
 </body>
