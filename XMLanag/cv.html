@@ -105,11 +105,17 @@
     var linkCV = document.createElement('a');
     linkCV.href = person.CV;
     linkCV.textContent = "Visualizza CV";
-    linkCV.target = "_blank"; // utilizzata per aprire una nuova scheda DA FINIRE:collegamento ad un'altra pagina da fare che poi si ricolleghi al mario_cv.json
+    linkCV.target = "_blank";
     cellCV.appendChild(linkCV);
     row.appendChild(cellCV);
 
-
+    var port = document.createElement('td');
+    var linkPort = document.createElement('a');
+    linkPort.href = person.portfolio;
+    linkPort.textContent = "Visualizza portfolio";
+    linkPort.target = "_blank";
+    port.appendChild(linkPort);
+    row.appendChild(port);
     tableBody.appendChild(row);
    }
   }
