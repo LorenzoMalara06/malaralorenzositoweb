@@ -17,10 +17,9 @@
         
          for (i = 0; i <x.length; i++) {
              let a=document.createElement("a");
-             var t=x[i].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
-             var l=x[i].getElementsByTagName("lavoro")[0].childNodes[0].nodeValue;
-             a.appendChild(t);
-             a.appendChild(l);
+             a.innerText=x[i].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
+             a.href=x[i].getElementsByTagName("lavoro")[0].childNodes[0].nodeValue;
+             
              spazio.appendChild(a);}
         }   lettore.send();}
 
