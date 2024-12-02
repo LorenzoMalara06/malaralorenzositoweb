@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.">
+ <title>Anagrafica</title>
+ <style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  img {
+    width: 150px;
+    height: auto;
+  }
+ </style>
+</head>
+<body>
+
+<h1>Elenco Anagrafica</h1>
+
+<table>
+ <thead>
+  <tr>
+    <th>Immagine</th>
+    <th>Nome</th>
+    <th>Cognome</th>
+    <th>Età</th>
+    <th>Indirizzo</th>
+    <th>Città</th>
+    <th>Telefoni</th>
+    <th>Email</th>
+    <th>CV</th>
+  </tr>
+ </thead>
+ <tbody id="tableBody">
+ 
+ </tbody>
+</table>
+
+<script>
+ 
+ var xhr = new XMLHttpRequest();
+ xhr.open('GET', 'cv.json', true); 
+
+ 
+ xhr.onload = function() {
+  if (xhr.status === 200) {
+   var data = JSON.parse(xhr.responseText);
+
+   var tableBody = document.getElementById('tableBody');
+
+
+   for (var i = 0; i < data.length; i++) {
+    var person = data[i];
+    var row = document.createElement('tr');
+
+
+    var cellImmagine = document.createElement('td');
+    var img = document.createElement('img');
+    img.src = person.Immagine;
+    cellImmagine.appendChild(img);
+    row.appendChild(cellImmagine);
+   
+   /* <a href="mario_cv.json" target="_blank">
+    <img src="mario.jpeg" alt="Immagine di Mario Rossi"> */
+
+    var cellNome = document.createElement('td');
+    cellNome.textContent = person.Nome;
+    row.appendChild(cellNome);
+
+    var cellCognome = document.createElement('td');
+    cellCognome.textContent = person.Cognome;
+    row.appendChild(cellCognome);
+
+    var cellEtà = document.createElement('td');
+    cellEtà.textContent = person.Età;
+    row.appendChild(cellEtà);
+
+    var cellIndirizzo = document.createElement('td');
+    cellIndirizzo.textContent = person.Indirizzo;
+    row.appendChild(cellIndirizzo);
+
+    var cellCittà = document.createElement('td');
+    cellCittà.textContent = person.Città;
+    row.appendChild(cellCittà);
+
+    var cellTelefoni = document.createElement('td');
+    cellTelefoni.textContent = person.Telefoni.join(', ');
+    row.appendChild(cellTelefoni);
+
+    var cellEmail = document.createElement('td');
+    cellEmail.textContent = person.Email;
+    row.appendChild(cellEmail);
+
+    var cellCV = document.createElement('td');
+    var linkCV = document.createElement('a');
+    linkCV.href = person.CV;
+    linkCV.textContent = "Visualizza CV";
+    linkCV.target = "_blank"; // utilizzata per aprire una nuova scheda DA FINIRE:collegamento ad un'altra pagina da fare che poi si ricolleghi al mario_cv.json
+    cellCV.appendChild(linkCV);
+    row.appendChild(cellCV);
+
+
+    tableBody.appendChild(row);
+   }
+  }
+ };
+
+
+ xhr.send();
+</script>
+
+</body>
+</html>

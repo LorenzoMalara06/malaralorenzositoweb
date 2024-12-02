@@ -1,0 +1,22 @@
+[{
+    "Nome": "Mario Rossi",
+    "DatadiNascita": "15-01-1993",
+    "Indirizzo": "Via Roma 1",
+    "Città": "Milano",
+    "Telefoni": ["+39 331 372 7389", "+38 874 837 2633"],
+    "Email": "mario.rossi@gmail.com",
+    
+    "Titolo": "Laurea in Informatica",
+    "Istituto": "Università di Milano",
+    "Anno": "29-08-2015",
+    
+    "Esperienza": [
+      {
+        "Posizione": "Sviluppatore Web",
+        "Azienda": "XYZ Srl",
+        "Anno": 2016
+      }
+    ],
+    "Competenze": ["JavaScript", "HTML", "CSS"]
+  }
+]
