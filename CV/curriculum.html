@@ -47,12 +47,21 @@
             for (var i = 0; i < data.length; i++) {
                 var person = data[i];
 
+                const indiri = document.getElementById("Indiri"); 
+                indiri.innerHTML = person.Indirizzo;    
+                const nom = document.getElementById("nome"); 
+                nom.innerHTML = person.Nome;  
+                const tele = document.getElementById("Tel"); 
+                tele.innerHTML = person.Telefoni;  
+                const em = document.getElementById("email"); 
+                em.innerHTML = person.Email;  
+                const da = document.getElementById("data"); 
+                da.innerHTML = person.DatadiNascita; 
 
-                 var cellIndirizzo = document.createElement('p');
-                cellIndirizzo.textContent = person.Indirizzo;
-                Indiri.appendChild(cellIndirizzo);
-                
-            
+                const ti = document.getElementById("Tit"); 
+                ti.innerHTML = person.Titolo; 
+                const dataist = document.getElementById("datist"); 
+                dataist.innerHTML = person.Anno; 
             
             }    
   }
@@ -66,34 +75,25 @@
 
 
 <div class="container">
-    <h1>Nome Cognome</h1>
+    <h1 id="nome"></h1>
 <img src="mario.jpeg" alt="Foto di Nome Cognome" class="profile-image" width="150" height="150">
 
  <div class="section">
   <div class="section-title">Informazioni personali</div>
   <p><strong>Indirizzo:</strong><p id="Indiri"></p></p>
-  <p><strong>Telefono:</strong> +39 012 345 6789</p>
-  <p><strong>Email:</strong> email@example.com</p>
-  <p><strong>Data di nascita:</strong> 1 gennaio 199</p>
-  <p><strong>Nazionalità:</strong> Italiana</p>
+  <p><strong>Telefono:</strong><p id="Tel"></p></p>
+  <p><strong>Email:</strong><p id="email"></p></p>
+  <p><strong>Data di nascita:</strong><p id="data"></p></p>
+  <p><strong>Nazionalità:</strong>Italiana</p>
  </div>
 
- <div class="section">
-  <div class="section-title">Esperienza lavorativa</div>
-  <h3>Nome Azienda - Ruolo</h3>
-  <p><strong>Data:</strong> Gennaio 202 - Presente</p>
-  <p>Descrizione delle responsabilità e dei risultati ottenuti nel ruolo.</p>
 
-  <h3>Nome Azienda - Ruolo Precedente</h3>
-  <p><strong>Data:</strong> Giugno 2018 - Dicembre 2019</p>
-  <p>Descrizione delle responsabilità e dei risultati ottenuti nel ruolo precedente.</p>
- </div>
 
  <div class="section">
   <div class="section-title">Istruzione e formazione</div>
-  <h3>Nome Università - Laurea</h3>
-  <p><strong>Data:</strong> Settembre 2014 - Giugno 2018</p>
-  <p>Descrizione del corso di studi e delle principali materie trattate.</p>
+  <h3>Università</h3>
+  <p><strong>Titolo di studio:</strong><p id="Tit"></p></p>
+  <p><strong>Data conseguimento:</strong><p id="datist"></p></p>
  </div>
 
  <div class="section">
