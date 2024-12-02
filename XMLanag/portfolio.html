@@ -14,7 +14,7 @@
         if(this.status==200 && this.readyState==4){
             const obj=this.responseXML;
             const  output=document.getElementById("Contenitore Link")
-            obj.getElementsByTagName("Dati")[0].childNodes.forEach(lavori=>{
+            obj.getElementsByTagName("link")[0].childNodes.forEach(lavori=>{
                 let a=document.createElement("a");
                 a.innerText=lavori.getElementsByTagName("titolo")[0] 
                 a.href=lavori.getElementsByTagName("lavoro")[0] 
