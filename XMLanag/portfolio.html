@@ -16,10 +16,8 @@
             const  output=document.getElementById("Contenitore Link")
             obj.getElementsByTagName("dati")[0].childNodes.forEach(lavori=>{
                 let a=document.createElement("a");
-                const t=lavori.getElementsByTagName("titolo")[0].textContent;
-                const l=lavori.getElementsByTagName("lavoro")[0].textContent;
-                a.appendChild(t);
-                a.appendChild(l);
+                a.innerText=lavori.getElementsByTagName("titolo")[0].textContent;
+                a.href=lavori.getElementsByTagName("lavoro")[0].textContent;
                 output.appendChild(a);
             });
         }else{
