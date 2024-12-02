@@ -16,12 +16,14 @@
         var persona = xmlDoc.getElementsByTagName("persona");
         
          for (i = 0; i <x.length; i++) {
-             let a=document.createElement("a");
-             a.innerText=x[i].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
-             a.href=x[i].getElementsByTagName("lavoro")[0].childNodes[0].nodeValue;
-             console.log(a);
+             let a=document.createElement("p");
+             a=x[i].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
+             spazio.appendChild(a);
+             let b=document.createElement("p");
+             b=x[i].getElementsByTagName("lavoro")[0].childNodes[0].nodeValue;
+             spazio.appendChild(b);
              
-             spazio.appendChild(a);}
+             }
         }   lettore.send();}
 
     </script>
