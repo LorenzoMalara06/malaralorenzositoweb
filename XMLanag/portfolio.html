@@ -63,10 +63,10 @@ td:first-child {
             req.onreadystatechange = function () {
                 if (this.status === 200) {
                     const xml = this.responseXML;
-                    const persona = xml.getElementsByTagName("persona");
+                    const data = xml.getElementsByTagName("dati");
                     const tab = document.getElementById("Table");
 
-                    for (let per of persona) {
+                    for (let per of data) {
                         const titolo = per.getElementsByTagName("titolo")[0].textContent;
                         const lavoro = per.getElementsByTagName("lavoro")[0].textContent;
 
