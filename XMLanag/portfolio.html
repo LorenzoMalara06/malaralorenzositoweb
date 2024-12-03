@@ -14,8 +14,12 @@
         if(this.status==200 && this.readyState==4){
         var xmlDoc = this.responseXML;
         var persona = xmlDoc.getElementsByTagName("persona");
+        const immagine = xmlDoc.getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
+        console.log(immagine);
+
+
         
-         //for (i = 0; i <persona.length; i++) {
+         for (i = 0; i <persona.length; i++) {
              let a=document.createElement("p");
              a.textContent=persona[0].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
              console.log("a");
