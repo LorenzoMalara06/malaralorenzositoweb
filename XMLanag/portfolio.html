@@ -17,11 +17,11 @@
         
          for (i = 0; i <persona.length; i++) {
              let a=document.createElement("p");
-             a.textContent=x[i].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
+             a.textContent=persona[i].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
              console.log("a");
              spazio.appendChild(a);
              let b=document.createElement("p");
-             b.href=x[i].getElementsByTagName("lavoro")[0].childNodes[0].nodeValue;
+             b.href=persona[i].getElementsByTagName("lavoro")[0].childNodes[0].nodeValue;
              consloe.log(b);
              spazio2.appendChild(b);
              
