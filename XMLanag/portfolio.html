@@ -71,10 +71,7 @@ td:first-child {
                         const lavoro = per.getElementsByTagName("lavoro")[0].textContent;
 
                         const riga = tab.insertRow();
-                        riga.innerHTML = `
-                            <td>${titolo}</td>
-                            <td><a href="${lavoro}">prova in un'altra finestra</a></td>
-                        `;
+                        riga.innerHTML = ` <td>${titolo}</td> <td><a href="${lavoro}">prova in un'altra finestra</a></td>  `;
                     }
                 }
             };
