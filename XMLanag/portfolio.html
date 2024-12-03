@@ -4,9 +4,52 @@
 <head>
     <title>Portfolio</title>
 </head>
+    <style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+
+th {
+    background-color: #4CAF50;  
+    color: white; 
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;  
+    text-align: left;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;  
+}
+
+tr:hover {
+    background-color: #ddd;  
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+
+td:first-child {
+    font-weight: bold;
+}
+
+    </style>
 <body>
     <h1>Portfolio</h1>
-    <table id="portfolioTable">
+    <table id="Table">
         <tr>
             <th>Titolo</th>
             <th>Link</th>
@@ -14,21 +57,20 @@
     </table>
 
     <script>
-        
-        //function caricaPortfolio() {
+    
             var req = new XMLHttpRequest();
             req.open("GET", "port.xml", true);
             req.onreadystatechange = function () {
                 if (this.status === 200) {
                     const xml = this.responseXML;
                     const persona = xml.getElementsByTagName("persona");
-                    const table = document.getElementById("portfolioTable");
+                    const tab = document.getElementById("Table");
 
                     for (let per of persona) {
                         const titolo = per.getElementsByTagName("titolo")[0].textContent;
                         const lavoro = per.getElementsByTagName("lavoro")[0].textContent;
 
-                        const riga = table.insertRow();
+                        const riga = tab.insertRow();
                         riga.innerHTML = `
                             <td>${titolo}</td>
                             <td><a href="${lavoro}">APRI</a></td>
@@ -37,7 +79,6 @@
                 }
             };
             req.send();
-       // }
-        //caricaPortfolio();
+    
     </script>
 </body>
