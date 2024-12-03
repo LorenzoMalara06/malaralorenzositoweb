@@ -13,7 +13,7 @@
     lettore.onreadystatechange=function(){
         if(this.status==200 && this.readyState==4){
         var xmlDoc = xml.responseXML;
-        var persona = xmlDoc.getElementsByTagName("persona");
+        var persona = xmlDoc.getElementsByTagName("dati");
         
          for (i = 0; i <persona.length; i++) {
              let a=document.createElement("p");
