@@ -5,36 +5,39 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <h1>Portfolio</h1>
+    <table id="portfolioTable">
+        <tr>
+            <th>Titolo</th>
+            <th>Link</th>
+        </tr>
+    </table>
+
     <script>
-
-
-    let lettore=new XMLHttpRequest();
-    lettore.open('GET', 'port.xml', true);
-    lettore.onreadystatechange=function(){
-        if(this.status==200 && this.readyState==4){
-        var xmlDoc = this.responseXML;
-        var persona = xmlDoc.getElementsByTagName("persona");
-        const immagine = xmlDoc.getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
-        console.log(immagine);
-
-
         
-         for (i = 0; i <persona.length; i++) {
-             let a=document.createElement("p");
-             a.textContent=persona[0].getElementsByTagName("titolo")[0].childNodes[0].nodeValue;
-             console.log("a");
-             spazio.appendChild(a);
-             let b=document.createElement("p");
-             b.href=persona[0].getElementsByTagName("lavoro")[0].childNodes[0].nodeValue;
-             consloe.log(b);
-             spazio2.appendChild(b);
-             
-             }
-        }   lettore.send();}
+        function caricaPortfolio() {
+            var req = new XMLHttpRequest();
+            req.open("GET", "port.xml", true);
+            req.onreadystatechange = function () {
+                if (this.status === 200) {
+                    const xml = this.responseXML;
+                    const persona = xml.getElementsByTagName("persona");
+                    const table = document.getElementById("portfolioTable");
 
+                    for (let per of persona) {
+                        const titolo = per.getElementsByTagName("titolo")[0].textContent;
+                        const lavoro = per.getElementsByTagName("lavoro")[0].textContent;
+
+                        const riga = table.insertRow();
+                        riga.innerHTML = `
+                            <td>${titolo}</td>
+                            <td><a href="${lavoro}">APRI</a></td>
+                        `;
+                    }
+                }
+            };
+            req.send();
+        }
+        caricaPortfolio();
     </script>
-    <div >
-        <p id="spazio"></p>
-        <p id="spazio2"></p>
-    </div>
 </body>
