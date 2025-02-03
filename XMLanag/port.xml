@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<dati>
-    <link>
-        <titolo>Calcolatrice</titolo>
-        <lavoro>https://lorenzomalara06.github.io/malaralorenzositoweb/Calcolatrice3.0/Calcolatrice%203.0.html</lavoro>
-</link>
-</dati>
+<port>
+        <dati>
+                <titolo>Calcolatrice</titolo>
+                <lavoro>https://lorenzomalara06.github.io/malaralorenzositoweb/Calcolatrice3.0/Calcolatrice%203.0.html</lavoro>
+        </dati>
+        <dati>
+                <titolo>ricetta</titolo>
+                <lavoro>https://lorenzomalara06.github.io/malaralorenzositoweb/ricetta/index.html</lavoro>
+        </dati>
+        <dati>
+                <titolo>Kahoot</titolo>
+                <lavoro>https://lorenzomalara06.github.io/malaralorenzositoweb/Kahoot/Kahoot.html</lavoro>
+        </dati>
+</port>

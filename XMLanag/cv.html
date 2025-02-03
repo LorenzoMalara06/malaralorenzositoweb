@@ -39,6 +39,7 @@
     <th>Telefoni</th>
     <th>Email</th>
     <th>CV</th>
+   <th>Portfolio</th>
   </tr>
  </thead>
  <tbody id="tableBody">
@@ -109,13 +110,13 @@
     cellCV.appendChild(linkCV);
     row.appendChild(cellCV);
 
-    var port = document.createElement('td');
+    var por = document.createElement('td');
     var linkPort = document.createElement('a');
     linkPort.href = person.portfolio;
     linkPort.textContent = "Visualizza portfolio";
     linkPort.target = "_blank";
-    port.appendChild(linkPort);
-    row.appendChild(port);
+    por.appendChild(linkPort);
+    row.appendChild(por);
     tableBody.appendChild(row);
    }
   }

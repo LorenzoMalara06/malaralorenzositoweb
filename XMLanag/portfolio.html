@@ -4,28 +4,78 @@
 <head>
     <title>Portfolio</title>
 </head>
+    <style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+
+th {
+    background-color: #4CAF50;  
+    color: white; 
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;  
+    text-align: left;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;  
+}
+
+tr:hover {
+    background-color: #ddd;  
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+
+td:first-child {
+    font-weight: bold;
+}
+
+    </style>
 <body>
+    <h1>Portfolio</h1>
+    <table id="Table">
+        <tr>
+            <th>Titolo</th>
+            <th>Link</th>
+        </tr>
+    </table>
+
     <script>
+    
+            var req = new XMLHttpRequest();
+            req.open("GET", "port.xml", true);
+            req.onreadystatechange = function () {
+                if (this.status === 200) {
+                    const xml = this.responseXML;
+                    const data = xml.getElementsByTagName("dati");
+                    const tab = document.getElementById("Table");
 
+                    for (let per of data) {
+                        const titolo = per.getElementsByTagName("titolo")[0].textContent;
+                        const lavoro = per.getElementsByTagName("lavoro")[0].textContent;
 
-    let lettore=new XMLHttpRequest();
-    lettore.open('GET', port.xml, true);
-    lettore.onreadystatechange=function(){
-        if(this.status==200 && this.readyState==4){
-            const obj=this.responseXML;
-            const  output=document.getElementById("Contenitore Link")
-            obj.getElementsByTagName("Dati")[0].childNodes.forEach(lavori=>{
-                let a=document.createElement("a");
-                a.innerText=lavoro.getElementsByTagName("titolo")[0] 
-                a.href=lavoro.getElementsByTagName("lavoro")[0] 
-                output.appendChild(a);
-            });
-        }else{
-            alert("Errore caricamento file XML")
-        
-        }
-    }
-    lettore.send();
-
+                        const riga = tab.insertRow();
+                        riga.innerHTML = ` <td>${titolo}</td> <td><a href="${lavoro}">prova in un'altra finestra</a></td>  `;
+                    }
+                }
+            };
+            req.send();
+    
     </script>
 </body>
