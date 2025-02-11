@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>#map { height: 100vh; }</style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        navigator.geolocation.getCurrentPosition(pos => {
+            let { latitude, longitude, accuracy } = pos.coords;
+            let map = L.map('map').setView([latitude, longitude], 18);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            L.marker([latitude, longitude]).addTo(map)
+                .bindPopup(`Sei qui! (Accuratezza: ±${accuracy.toFixed(2)}m)`).openPopup();
+        }, () => alert("Posizione non disponibile."), { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 });
+    </script>
+</body>
+</html>
